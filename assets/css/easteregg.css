@@ -1,0 +1,206 @@
+body {
+    background-size: 400% 400%;
+    animation: rainbow-bg 2.5s linear;
+    animation-iteration-count: infinite;
+    height: 100vh;
+    margin: 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    overflow: hidden;
+}
+
+@keyframes rainbow-bg{
+    100%,0%{
+        background-color: rgb(255,0,0);
+    }
+    8%{
+        background-color: rgb(255,127,0);
+    }
+    16%{
+        background-color: rgb(255,255,0);
+    }
+    25%{
+        background-color: rgb(127,255,0);
+    }
+    33%{
+        background-color: rgb(0,255,0);
+    }
+    41%{
+        background-color: rgb(0,255,127);
+    }
+    50%{
+        background-color: rgb(0,255,255);
+    }
+    58%{
+        background-color: rgb(0,127,255);
+    }
+    66%{
+        background-color: rgb(0,0,255);
+    }
+    75%{
+        background-color: rgb(127,0,255);
+    }
+    83%{
+        background-color: rgb(255,0,255);
+    }
+    91%{
+        background-color: rgb(255,0,127);
+    }
+}
+
+p {
+    text-shadow: 2px 2px 3px #000000;
+    font-size: 3em;
+    color: red;
+    position: absolute;
+
+    animation-name: upDown;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0%);
+    }
+    25% {
+        transform: translateY(-500%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    75% {
+        transform: translateY(500%);
+    }
+}
+
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation-name: circle;
+    animation-duration: 6s;
+    opacity: 0;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#image1 {
+    animation-delay: 0s;
+
+}
+
+#image2 {
+    animation-delay: 2s;
+
+}
+
+#image3 {
+    animation-delay: 4s;
+
+}
+
+@keyframes circle {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg) translate(375px) rotate(0deg);
+    }
+    25% {
+        opacity: 1;
+        transform: rotate(90deg) translate(375px) rotate(360deg);
+    }
+    50% {
+        opacity: 1;
+        transform: rotate(180deg) translate(375px) rotate(720deg);
+    }
+    75% {
+        opacity: 1;
+        transform: rotate(270deg) translate(375px) rotate(1080deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(360deg) translate(375px) rotate(1440deg);
+    }
+}
+
+#rainbow {
+    text-shadow: 2px 2px 3px #000000;
+    font-size: 6em;
+    animation: rainbow 0.5s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbow {
+    100%, 0% {
+        color: rgb(255, 0, 0);
+    }
+    8% {
+        color: rgb(255, 127, 0);
+    }
+    16% {
+        color: rgb(255, 255, 0);
+    }
+    25% {
+        color: rgb(127, 255, 0);
+    }
+    33% {
+        color: rgb(0, 255, 0);
+    }
+    41% {
+        color: rgb(0, 255, 127);
+    }
+    50% {
+        color: rgb(0, 255, 255);
+    }
+    58% {
+        color: rgb(0, 127, 255);
+    }
+    66% {
+        color: rgb(0, 0, 255);
+    }
+    75% {
+        color: rgb(127, 0, 255);
+    }
+    83% {
+        color: rgb(255, 0, 255);
+    }
+    91% {
+        color: rgb(255, 0, 127);
+    }
+}
+
+#gova {
+    position: absolute;
+    animation: moving 4s ease-in-out infinite;
+}
+
+@keyframes moving {
+    0% {
+        left: -50%;
+        transform: scaleX(1) translate(-50%, -50%);
+    }
+    50% {
+        left: 150%;
+        transform: scaleX(1) translate(-50%, -50%);
+    }
+    50.01% {
+        left: 150%;
+        transform: scaleX(-1) translate(-50%, -50%);
+    }
+    100% {
+        left: -50%;
+        transform: scaleX(-1) translate(-50%, -50%);
+    }
+}
+
