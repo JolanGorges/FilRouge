@@ -1,4 +1,7 @@
 body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -33,6 +36,10 @@ nav a {
     transition: all 0.2s ease-in-out;
 }
 
+a {
+    color: #000;
+}
+
 nav a:hover {
     background-color: #fff;
     color: #333;
@@ -45,30 +52,55 @@ h1 {
 }
 
 main {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-    align-content: start;
-    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-section {
-    background-color: #f2f2f2;
+.movie-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie-card {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.movie-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.movie-info {
     padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
 }
 
-section:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.movie-title {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.movie-date {
+    margin: 10px 0 0;
+    font-size: 1em;
+    text-align: justify;
+}
+section {
+    padding: 10px;
 }
 
 h2 {
     font-size: 24px;
     font-weight: bold;
-    margin: 0 0 10px;
 }
 
 p {
@@ -85,3 +117,13 @@ footer {
     margin-top: auto;
 }
 
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
